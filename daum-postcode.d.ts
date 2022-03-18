@@ -148,8 +148,11 @@ declare global {
   type DaumPostcodeResizeHandler = (size: DaumPostcodeSize) => void;
   type DaumPostcodeCloseHandler = (state: DaumPostcodeState) => void;
   type DaumPostcodeSearchHandler = (data: DaumPostcodeSearchData) => void;
-  type DaumPostcodeEmbedHandler = (HTMLElemnt, DaumPostcodeOptions?) => void;
-  type DaumPostcodeOpenHander = (DaumPostcodeOpenOptions?) => void;
+  type DaumPostcodeEmbedHandler = (
+    element: HTMLElement,
+    options?: DaumPostcodeOptions
+  ) => void;
+  type DaumPostcodeOpenHander = (options?: DaumPostcodeOpenOptions) => void;
 
   interface DaumPostcodeConstructor {
     new (options: DaumPostcodeOptions): {
