@@ -50,10 +50,16 @@ declare global {
     jibunAddress: string;
     jibunAddressEnglish: string;
     noSelected: 'N' | 'Y';
+
+    /** @deprecated */
     postcode: '';
+    /** @deprecated */
     postcode1: '';
+    /** @deprecated */
     postcode2: '';
+    /** @deprecated */
     postcodeSeq: '';
+
     query: string;
     roadAddress: string;
     roadAddressEnglish: string;
