@@ -104,7 +104,7 @@ export interface DaumPostcodeOptions {
   onclose?: DaumPostcodeCloseHandler;
   oncomplete?: DaumPostcodeCompleteHandler;
   onresize?: DaumPostcodeResizeHandler;
-  onsearch?: DaumPostcodeResizeHandler;
+  onsearch?: DaumPostcodeSearchHandler;
   pleaseReadGuide?:
     | 0
     | 3
@@ -157,14 +157,14 @@ export type DaumPostcodeEmbedHandler = (
   element: HTMLElement,
   options?: DaumPostcodeOptions
 ) => void;
-export type DaumPostcodeOpenHander = (
+export type DaumPostcodeOpenHandler = (
   options?: DaumPostcodeOpenOptions
 ) => void;
 
 export interface DaumPostcodeConstructor {
   new (options: DaumPostcodeOptions): {
     embed: DaumPostcodeEmbedHandler;
-    open: DaumPostcodeOpenHander;
+    open: DaumPostcodeOpenHandler;
   };
 }
 
