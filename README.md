@@ -1,6 +1,6 @@
 # daum-postcode.d.ts
 
-## Install
+## 1. Install
 
 ```bash
 yarn add -D daum-postcode.d.ts
@@ -10,11 +10,21 @@ yarn add -D daum-postcode.d.ts
 npm i -D daum-postcode.d.ts
 ```
 
-## Setting
+## 2. Setting
 
-tsconfig.json
+You can choose between 1 and 2.
 
-```json
+### 2.1 Triple-Slash Directives
+
+global.d.ts
+
+```typescript
+/// <reference types="daum-postcode.d.ts" />
+```
+
+### 2.2 tsconfig.json
+
+```
 {
   ...,
   "compilerOptions": {
