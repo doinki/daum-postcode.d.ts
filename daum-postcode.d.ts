@@ -97,7 +97,7 @@ declare global {
     hideMapBtn?: boolean;
     maxSuggestItems?: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
     onclose?: DaumPostcodeCloseHandler;
-    oncomplete?: (data: DaumPostcodeData) => void;
+    oncomplete?: DaumPostcodeCompleteHandler;
     onresize?: DaumPostcodeResizeHandler;
     onsearch?: DaumPostcodeResizeHandler;
     pleaseReadGuide?:
