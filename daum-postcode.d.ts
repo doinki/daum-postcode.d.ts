@@ -1,3 +1,6 @@
+/**
+ * @see [테마](https://postcode.map.daum.net/guide#themeWizard)
+ */
 export interface DaumPostcodeTheme {
   /** @summary 바탕 배경색 */
   bgColor?: string;
@@ -28,50 +31,174 @@ export interface DaumPostcodeTheme {
 }
 
 export interface DaumPostcodeData {
+  /**
+   * @example '경기 성남시 분당구 판교역로 235'
+   */
   address: string;
+
+  /**
+   * @example '235 Pangyoyeok-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, korea'
+   */
   addressEnglish: string;
+
+  /** 검색된 기본 주소 타입 */
   addressType: 'J' | 'R';
+
+  /** 공동주택 여부 */
   apartment: 'N' | 'Y';
+
+  /**
+   * @example '경기 성남시 분당구 삼평동 681'
+   */
   autoJibunAddress: string;
+
+  /**
+   * @example '681, Sampyeong-dong, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
+   */
   autoJibunAddressEnglish: string;
+
+  /**
+   * @example '경기 성남시 분당구 판교역로 235'
+   */
   autoRoadAddress: string;
+
+  /**
+   * @example '235, Pangyoyeok-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
+   */
   autoRoadAddressEnglish: string;
+
+  /**
+   * @example '4113510900'
+   */
   bcode: string;
+
+  /**
+   * @example '삼평동'
+   */
   bname: string;
+
+  /** 법정리의 읍/면 이름 */
   bname1: string;
+
+  /** 법정리의 읍/면 이름의 영문 */
   bname1English: string;
+
+  /**
+   * @example '삼평동'
+   */
   bname2: string;
+
+  /**
+   * @example 'Sampyeong-dong'
+   */
   bname2English: string;
+
+  /**
+   * @example 'Sampyeong-dong'
+   */
   bnameEnglish: string;
+
+  /**
+   * @example '4113510900106810000000001'
+   */
   buildingCode: string;
+
+  /**
+   * @example '에이치스퀘어 엔동'
+   */
   buildingName: string;
+
+  /**
+   * 행정동 이름, 검색어를 행정동으로 검색하고, 검색결과의 법정동과 검색어에 입력한 행정동과 다른 경우에 표시하고, 데이터를 내립니다.
+   */
   hname: string;
+
+  /**
+   * @example '경기 성남시 분당구 삼평동 681'
+   */
   jibunAddress: string;
+
+  /**
+   * @example '681, Sampyeong-dong, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
+   */
   jibunAddressEnglish: string;
+
+  /** 연관 주소에서 "선택 안함" 부분을 선택했을때를 구분할 수 있는 상태변수 */
   noSelected: 'N' | 'Y';
 
-  /** @deprecated */
+  /** @deprecated 구 우편번호 */
   postcode: '';
-  /** @deprecated */
+  /** @deprecated 구 우편번호 앞 3자리 */
   postcode1: '';
-  /** @deprecated */
+  /** @deprecated 구 우편번호 뒤 3자리 */
   postcode2: '';
-  /** @deprecated */
+  /** @deprecated 구 우편번호 일련번호 */
   postcodeSeq: '';
 
+  /**
+   * @example '판교역로 235'
+   */
   query: string;
+
+  /**
+   * @example '경기 성남시 분당구 판교역로 235'
+   */
   roadAddress: string;
+
+  /**
+   * @example '235, Pangyoyeok-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
+   */
   roadAddressEnglish: string;
+
+  /**
+   * @example '판교역로'
+   */
   roadname: string;
+
+  /**
+   * @example '3179025'
+   */
   roadnameCode: string;
+
+  /**
+   * @example 'Pangyoyeok-ro'
+   */
   roadnameEnglish: string;
+
+  /**
+   * @example '경기'
+   */
   sido: string;
+
+  /**
+   * @example 'Gyeonggi-do'
+   */
   sidoEnglish: string;
+
+  /**
+   * @example '성남시 분당구'
+   */
   sigungu: string;
+
+  /**
+   * @example '41135'
+   */
   sigunguCode: string;
+
+  /**
+   * @example 'Bundang-gu Seongnam-si'
+   */
   sigunguEnglish: string;
+
+  /** 색 결과에서 사용자가 선택한 주소의 언어 타입 */
   userLanguageType: 'E' | 'K';
+
+  /** 검색 결과에서 사용자가 선택한 주소의 타입 */
   userSelectedType: 'J' | 'R';
+
+  /**
+   * @example '13494'
+   */
   zonecode: string;
 }
 
