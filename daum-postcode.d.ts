@@ -231,8 +231,6 @@ export interface DaumPostcodeOptions {
    */
   animation?: boolean;
 
-  autoClose?: boolean;
-
   /**
    * @default true
    */
@@ -364,7 +362,7 @@ export interface DaumPostcodeOptions {
 }
 
 export interface DaumPostcodeEmbedOptions {
-  autoClose?: DaumPostcodeOptions['autoClose'];
+  autoClose?: boolean;
   q?: DaumPostcodeSearchData['q'];
 }
 
