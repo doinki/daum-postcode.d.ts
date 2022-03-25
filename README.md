@@ -16,6 +16,15 @@ You can choose between 1 and 2.
 
 ### 2.1 Triple-Slash Directives
 
+tsconfig.json
+
+```
+{
+  ...,
+  include: [..., "somewhere/global.d.ts"]
+}
+```
+
 global.d.ts
 
 ```typescript
