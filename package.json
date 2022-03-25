@@ -3,5 +3,5 @@
   "name": "daum-postcode.d.ts",
   "repository": "https://github.com/doinki/daum-postcode.d.ts.git",
   "types": "daum-postcode.d.ts",
-  "version": "1.2.0"
+  "version": "1.2.1"
 }
