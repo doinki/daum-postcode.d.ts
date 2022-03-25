@@ -387,13 +387,13 @@ export type DaumPostcodeOpenHandler = (
 
 export interface DaumPostcodeConstructor {
   new (options: DaumPostcodeOptions): {
-    embed: DaumPostcodeEmbedHandler;
-    open: DaumPostcodeOpenHandler;
+    readonly embed: DaumPostcodeEmbedHandler;
+    readonly open: DaumPostcodeOpenHandler;
   };
 }
 
 export interface Daum {
-  Postcode: DaumPostcodeConstructor;
+  readonly Postcode: DaumPostcodeConstructor;
 }
 
 declare global {
@@ -405,6 +405,6 @@ declare global {
     /**
      * @see [Daum Postcode](https://postcode.map.daum.net/guide)
      */
-    daum: Daum;
+    readonly daum: Daum;
   }
 }
