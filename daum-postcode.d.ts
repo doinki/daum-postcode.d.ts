@@ -381,7 +381,7 @@ export type DaumPostcodeCloseHandler = (state: DaumPostcodeState) => void;
 export type DaumPostcodeSearchHandler = (data: DaumPostcodeSearchData) => void;
 export type DaumPostcodeEmbedHandler = (
   element: HTMLElement,
-  options?: DaumPostcodeOptions
+  options?: DaumPostcodeEmbedOptions
 ) => void;
 export type DaumPostcodeOpenHandler = (
   options?: DaumPostcodeOpenOptions
