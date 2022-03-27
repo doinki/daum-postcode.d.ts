@@ -1,4 +1,10 @@
 {
+  "description": "Daum Postcode Type Definitions",
+  "keywords": [
+    "postcode",
+    "daum",
+    "kakao"
+  ],
   "license": "MIT",
   "name": "daum-postcode.d.ts",
   "repository": "https://github.com/doinki/daum-postcode.d.ts.git",
