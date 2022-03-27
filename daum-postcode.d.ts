@@ -363,13 +363,15 @@ export interface DaumPostcodeOptions {
 
 export interface DaumPostcodeEmbedOptions {
   autoClose?: boolean;
-  q?: DaumPostcodeSearchData['q'];
+  q?: string;
 }
 
-export interface DaumPostcodeOpenOptions extends DaumPostcodeEmbedOptions {
+export interface DaumPostcodeOpenOptions {
+  autoClose?: boolean;
   left?: number;
   popupKey?: string;
   popupTitle?: string;
+  q?: string;
   top?: number;
 }
 
