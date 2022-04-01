@@ -36,6 +36,18 @@ global.d.ts
 ```
 {
   ...,
+  "files": [
+    ...,
+    "node_modules/daum-postcode.d.ts/daum-postcode.d.ts"
+  ]
+}
+```
+
+or
+
+```
+{
+  ...,
   "compilerOptions": {
     ...,
     "types": [
