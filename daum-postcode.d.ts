@@ -32,11 +32,13 @@ export interface DaumPostcodeTheme {
 
 export interface DaumPostcodeData {
   /**
+   * 기본 주소
    * @example '경기 성남시 분당구 판교역로 235'
    */
   address: string;
 
   /**
+   * 기본 영문 주소
    * @example '235 Pangyoyeok-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, korea'
    */
   addressEnglish: string;
@@ -48,31 +50,37 @@ export interface DaumPostcodeData {
   apartment: 'N' | 'Y';
 
   /**
+   * 도로명주소에 매핑된 지번주소가 여러 개인 경우, 사용자가 선택안함 또는 도로명주소를 클릭했을 때 연관된 지번주소 중 임의로 첫 번째 매핑 주소를 넣어서 반환합니다.
    * @example '경기 성남시 분당구 삼평동 681'
    */
   autoJibunAddress: string;
 
   /**
+   * autoJibunAddress의 영문 지번 주소
    * @example '681, Sampyeong-dong, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
    */
   autoJibunAddressEnglish: string;
 
   /**
+   * 지번주소에 매핑된 도로명주소가 여러 개인 경우, 사용자가 선택안함 또는 지번주소를 클릭했을 때 연관된 도로명주소 중 임의로 첫 번째 매핑 주소를 넣어서 반환합니다.
    * @example '경기 성남시 분당구 판교역로 235'
    */
   autoRoadAddress: string;
 
   /**
+   * autoRoadAddress의 영문 도로명 주소
    * @example '235, Pangyoyeok-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
    */
   autoRoadAddressEnglish: string;
 
   /**
+   * 법정동/법정리 코드
    * @example '4113510900'
    */
   bcode: string;
 
   /**
+   * 법정동/법정리 이름
    * @example '삼평동'
    */
   bname: string;
@@ -84,26 +92,31 @@ export interface DaumPostcodeData {
   bname1English: string;
 
   /**
+   * 법정동/법정리 이름
    * @example '삼평동'
    */
   bname2: string;
 
   /**
+   * 법정동/법정리 이름의 영문
    * @example 'Sampyeong-dong'
    */
   bname2English: string;
 
   /**
+   * 법정동/법정리 이름의 영문
    * @example 'Sampyeong-dong'
    */
   bnameEnglish: string;
 
   /**
+   * 건물관리번호
    * @example '4113510900106810000000001'
    */
   buildingCode: string;
 
   /**
+   * 건물명
    * @example '에이치스퀘어 엔동'
    */
   buildingName: string;
@@ -114,16 +127,18 @@ export interface DaumPostcodeData {
   hname: string;
 
   /**
+   * 지번주소
    * @example '경기 성남시 분당구 삼평동 681'
    */
   jibunAddress: string;
 
   /**
+   * 영문 지번주소
    * @example '681, Sampyeong-dong, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
    */
   jibunAddressEnglish: string;
 
-  /** 연관 주소에서 "선택 안함" 부분을 선택했을때를 구분할 수 있는 상태변수 */
+  /** 연관 주소에서 선택안함 부분을 선택했을 때를 구분할 수 있는 상태 변수 */
   noSelected: 'N' | 'Y';
 
   /** @deprecated 구 우편번호 */
@@ -136,81 +151,109 @@ export interface DaumPostcodeData {
   postcodeSeq: '';
 
   /**
+   * 사용자가 입력한 검색어
    * @example '판교역로 235'
    */
   query: string;
 
   /**
+   * 도로명주소
    * @example '경기 성남시 분당구 판교역로 235'
    */
   roadAddress: string;
 
   /**
+   * 영문 도로명주소
    * @example '235, Pangyoyeok-ro, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea'
    */
   roadAddressEnglish: string;
 
   /**
+   * 도로명 값, 검색 결과 중 선택한 도로명주소의 도로명 값이 들어갑니다(건물번호 제외).
    * @example '판교역로'
    */
   roadname: string;
 
   /**
+   * 도로명 코드, 7자리로 구성된 도로명 코드입니다. 추후 7자리 이상으로 늘어날 수 있습니다.
    * @example '3179025'
    */
   roadnameCode: string;
 
   /**
+   * 도로명 값, 검색 결과 중 선택한 도로명주소의 도로명의 영문 값이 들어갑니다(건물번호 제외).
    * @example 'Pangyoyeok-ro'
    */
   roadnameEnglish: string;
 
   /**
+   * 도/시 이름
    * @example '경기'
    */
   sido: string;
 
   /**
+   * 도/시 이름의 영문
    * @example 'Gyeonggi-do'
    */
   sidoEnglish: string;
 
   /**
+   * 시/군/구 이름
    * @example '성남시 분당구'
    */
   sigungu: string;
 
   /**
+   * 시/군/구 코드
    * @example '41135'
    */
   sigunguCode: string;
 
   /**
+   * 시/군/구 이름의 영문
    * @example 'Bundang-gu Seongnam-si'
    */
   sigunguEnglish: string;
 
-  /** 색 결과에서 사용자가 선택한 주소의 언어 타입 */
+  /** 검색 결과에서 사용자가 선택한 주소의 언어 타입 */
   userLanguageType: 'E' | 'K';
 
   /** 검색 결과에서 사용자가 선택한 주소의 타입 */
   userSelectedType: 'J' | 'R';
 
   /**
+   * 국가기초구역번호. 2015년 8월 1일부터 시행된 새 우편번호.
    * @example '13494'
    */
   zonecode: string;
 }
 
 export interface DaumPostcodeSize {
+  /**
+   * 검색 결과 화면 높이
+   * @example 500
+   */
   height: number;
+  /**
+   * 검색 결과 화면 넓이
+   * @example 772
+   */
   width: number;
 }
 
 export type DaumPostcodeState = 'COMPLETE_CLOSE' | 'FORCE_CLOSE';
 
 export interface DaumPostcodeSearchData {
+  /**
+   * 검색결과의 총 개수
+   * @example 1
+   */
   count: number;
+  /**
+   * 검색창에 입력된 검색어
+   * @example '판교역로 235'
+   */
   q: string;
 }
 
@@ -220,7 +263,7 @@ export interface DaumPostcodeSearchData {
 export interface DaumPostcodeOptions {
   /**
    * 검색 결과의 한글과 영문 주소를 동시에 볼 수 있게 해주는 기능입니다.\
-   * 해당 기능 활성화시 "영문보기" 버튼은 감춰집니다(hideEngBtn 속성의 설정 값보다 우선시 됩니다).
+   * 해당 기능 활성화시 영문보기 버튼은 감춰집니다(hideEngBtn 속성의 설정 값보다 우선시 됩니다).
    * @default false
    */
   alwaysShowEngAddr?: boolean;
@@ -256,14 +299,14 @@ export interface DaumPostcodeOptions {
   height?: number | string;
 
   /**
-   * 검색 결과의 "영문보기" 버튼을 가릴 수 있는 옵션입니다.\
+   * 검색 결과의 영문보기 버튼을 가릴 수 있는 옵션입니다.\
    * 다만, 해당 기능은 자신의 주소에 익숙하지 못한 사용자들에 도움을 주는 기능으로, app에 임베딩을 해야되는 상황이거나 버튼이 눌러지면 안되는 상황일때 선택적으로 이용하시는 것을 권장합니다.
    * @default false
    */
   hideEngBtn?: boolean;
 
   /**
-   * 검색 결과의 "지도" 버튼을 가릴 수 있는 옵션입니다.\
+   * 검색 결과의 지도 버튼을 가릴 수 있는 옵션입니다.\
    * 다만, 해당 기능은 자신의 주소에 익숙하지 못한 사용자들에 도움을 주는 기능으로, app에 임베딩을 해야되는 상황이거나 버튼이 눌러지면 안되는 상황일때 선택적으로 이용하시는 것을 권장합니다.
    * @default false
    */
@@ -332,7 +375,7 @@ export interface DaumPostcodeOptions {
   showMoreHName?: boolean;
 
   /**
-   * "form submit" 방식을 사용합니다. false로 설정 시 "location replace" 방식을 사용하게 됩니다.\
+   * form submit 방식을 사용합니다. false로 설정 시 location replace 방식을 사용하게 됩니다.\
    * 우편번호 서비스로 인해 history 관련 제어가 어려우실 경우 false로 설정하여 이용하시기 바랍니다.
    * @default true
    */
@@ -345,7 +388,7 @@ export interface DaumPostcodeOptions {
   theme?: DaumPostcodeTheme | null;
 
   /**
-   * 하단 배너에 "가이드페이지"로 이동하는 링크를 활성화 시킵니다.
+   * 하단 배너에 가이드페이지로 이동하는 링크를 활성화 시킵니다.
    * @default true
    */
   useBannerLink?: boolean;
@@ -362,16 +405,24 @@ export interface DaumPostcodeOptions {
 }
 
 export interface DaumPostcodeEmbedOptions {
+  /** 자동 닫힘 유무 */
   autoClose?: boolean;
+  /** 검색어 */
   q?: string;
 }
 
 export interface DaumPostcodeOpenOptions {
+  /** 자동 닫힘 유무 */
   autoClose?: boolean;
+  /** 팝업 위치 x값 */
   left?: number;
+  /** 팝업창 구분값 */
   popupKey?: string;
+  /** 팝업창의 타이틀 */
   popupTitle?: string;
+  /** 검색어 */
   q?: string;
+  /** 팝업 위치 y값 */
   top?: number;
 }
 
