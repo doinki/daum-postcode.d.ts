@@ -1,5 +1,11 @@
 # daum-postcode.d.ts
 
+## This package has been **deprecated**
+
+Install [@types/daum-postcode](https://www.npmjs.com/package/@types/daum-postcode) instead of this.
+
+---
+
 ## 1. Install
 
 ```bash
